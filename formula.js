@@ -35,5 +35,6 @@ function callPayment() {
 	document.getElementById("result").innerHTML = pay;
 }
 function payment(ratePerPeriod, presentValue, numberOfPeriods) {
-	return Math.round((ratePerPeriod * presentValue) / (1 - (Math.pow(1 + ratePerPeriod, -numberOfPeriods)))) / 12;
+  let roundedAnswer = Math.round((ratePerPeriod * presentValue) / (1 - (Math.pow(1 + ratePerPeriod, -numberOfPeriods)))) / 12;
+  return = roundedAnswer.toFixed(0);
 }
