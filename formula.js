@@ -17,7 +17,7 @@ var acc = document.getElementsByClassName("accordion");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
+    acc[i].onclick = function() {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
@@ -27,6 +27,7 @@ for (i = 0; i < acc.length; i++) {
         }
     }
 }
+
 function callPayment() {
 	var x = document.getElementsByName("ratePerPeriod")[0].value *.01;
 	var y = document.getElementsByName("presentValue")[0].value;
@@ -36,5 +37,5 @@ function callPayment() {
 }
 function payment(ratePerPeriod, presentValue, numberOfPeriods) {
   let roundedAnswer = Math.round((ratePerPeriod * presentValue) / (1 - (Math.pow(1 + ratePerPeriod, -numberOfPeriods)))) / 12;
-  return = roundedAnswer.toFixed(0);
+  return roundedAnswer.toFixed(0);
 }
